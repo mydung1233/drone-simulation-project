@@ -1,0 +1,17 @@
+digraph G {
+node [shape=box];
+"base_link" [label="base_link"];
+"rotor_front_left" [label="rotor_front_left"];
+"rotor_front_right" [label="rotor_front_right"];
+"rotor_rear_left" [label="rotor_rear_left"];
+"rotor_rear_right" [label="rotor_rear_right"];
+node [shape=ellipse, color=blue, fontcolor=blue];
+"base_link" -> "rotor_front_left_joint" [label="xyz: 0.15 0.15 0.05 \nrpy: 0 -0 0"]
+"rotor_front_left_joint" -> "rotor_front_left"
+"base_link" -> "rotor_front_right_joint" [label="xyz: 0.15 -0.15 0.05 \nrpy: 0 -0 0"]
+"rotor_front_right_joint" -> "rotor_front_right"
+"base_link" -> "rotor_rear_left_joint" [label="xyz: -0.15 0.15 0.05 \nrpy: 0 -0 0"]
+"rotor_rear_left_joint" -> "rotor_rear_left"
+"base_link" -> "rotor_rear_right_joint" [label="xyz: -0.15 -0.15 0.05 \nrpy: 0 -0 0"]
+"rotor_rear_right_joint" -> "rotor_rear_right"
+}
